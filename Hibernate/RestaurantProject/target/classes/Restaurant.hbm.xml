@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name = "example.hibernate.entity.Restaurant" table="restaurant_master">
+      <id name = "restaurantId" type = "int" column="rest_id"/>            
+      <property name = "name" column = "rest_name" type = "string"/><!-- This is not a Java type, it is Hibernate type -->
+      <property name = "cuisine" column = "rest_cuisine" type = "string"/>
+      <property name = "branchCount" type = "int">
+      	<column name="rest_branch_count"/>
+      </property>     
+   </class>
+</hibernate-mapping>
